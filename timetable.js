@@ -76,6 +76,7 @@ document.getElementById('busSelector').addEventListener('change', (event) => {
     }
 
     let timetable = timetableData[bus]
+    document.getElementById('expiredBtn').hidden = false
 
     if (timetable.routes.length == 1) {
         document.getElementById('timetable').innerHTML = timetable.routes[0].html
@@ -88,7 +89,6 @@ document.getElementById('busSelector').addEventListener('change', (event) => {
         return
     }
 
-    document.getElementById('expiredBtn').hidden = false
 
     op1Label = document.getElementById('op1Label')
     op1Label.innerHTML = timetable.routes[0].destination
